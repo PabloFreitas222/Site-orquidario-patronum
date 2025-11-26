@@ -2,12 +2,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Declaração de metadados da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patronum</title>
+    <!-- Arquivo CSS externo para estilos -->
     <link rel="stylesheet" href="style.css">
+    <!-- Ícone da página (favicon) -->
     <link rel="shortcut icon" href="assets/img/icon/icone-removebg-preview.png" type="image/x-icon">
 </head>
+
+<!-- Estilos inline para títulos e parágrafos -->
 <style>
     h1, h2, h3, p {
         font-family:Arial, Helvetica, sans-serif;
@@ -17,188 +22,234 @@
         font-size: 25px;
     }
 </style>
+
 <body>
+    <!-- Âncora para a seção inicial -->
     <div id="home"></div>
+    
+    <!-- CABEÇALHO - Contém logo e navegação -->
     <header class="header">
-  <div class="logo">
-    <img src="assets/img/icon/12d1d38c3991471d78d8cfadcdf22b91-removebg-preview.ico" alt="Logo">
-    <h1>Patronum</h1>
-  </div>
+        <!-- Logo e nome da empresa -->
+        <div class="logo">
+            <img src="assets/img/icon/12d1d38c3991471d78d8cfadcdf22b91-removebg-preview.ico" alt="Logo">
+            <h1>Patronum</h1>
+        </div>
 
-  <nav class="navbar" id="navbar">
-    <ul>
-      <li style="font-size: 19px;"><a href="#home">Início</a></li>
-      <li style="font-size: 19px;"><a href="#ingresso">Ingressos</a></li>
-      <li style="font-size: 19px;"><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-  
-  <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-</header>
+        <!-- Navegação principal -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li style="font-size: 19px;"><a href="#home">Início</a></li>
+                <li style="font-size: 19px;"><a href="#ingresso">Ingressos</a></li>
+                <li style="font-size: 19px;"><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Menu hambúrguer para dispositivos móveis -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
-
-<main>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- SEÇÃO HERO - Apresentação do evento com carrossel de imagens -->
         <section class="hero container">
+            <!-- Texto descritivo do evento -->
             <div class="hero__text animate-slide-up">
                 <div style="font-size: 20px;">
                     <h1 style="color: #003d4d;">Evento mistico
                         <br>
                         Patronum
-                        </h1>
-                    <p style="font-size: 13px;">O Orquidário de Santos receberá o evento "A Magia do Patronum", inspirado em Harry Potter. Com projeções 3D, trilhas iluminadas e sons misteriosos, o espaço se transforma à noite em uma floresta mágica onde Patronos ganham vida. A experiência une natureza e fantasia, encantando visitantes de todas as idades.</p>
+                    </h1>
+                    <p style="font-size: 13px;">
+                        O Orquidário de Santos receberá o evento "A Magia do Patronum", inspirado em Harry Potter. 
+                        Com projeções 3D, trilhas iluminadas e sons misteriosos, o espaço se transforma à noite em 
+                        uma floresta mágica onde Patronos ganham vida. A experiência une natureza e fantasia, 
+                        encantando visitantes de todas as idades.
+                    </p>
                 </div>
             </div>
+
+            <!-- CARROSSEL DE IMAGENS - Produtos/blusas do evento -->
             <div class="carousel animate-zoom-in" id="carousel">
                 <div class="carousel__track">
-<div class="carousel__slide">
-    <img src="assets/img/blusas/casaco-azul.jpg" alt="Blusa 1">
-</div>
-<div class="carousel__slide">
-    <img src="assets/img/blusas/casaco-preto.jpg" alt="Blusa 2">
-</div>
-<div class="carousel__slide">
-    <img src="assets/img/blusas/cervo-frente.jpg" alt="Blusa 3">
-</div>
-<div class="carousel__slide">
-    <img src="assets/img/blusas/cervo-costa.jpg" alt="Blusa 4">
-</div>
-<div class="carousel__slide">
-    <img src="assets/img/blusas/raposa-frente.jpg" alt="Blusa 5">
-</div>
-<div class="carousel__slide">
-    <img src="assets/img/blusas/raposa-costa.jpg" alt="Blusa 6">
-</div>
-<div class="carousel__slide">
-    <img src="assets/img/blusas/passaro.jpg" alt="Blusa 7">
-</div>
-</div>
-    <button class="carousel__control prev" aria-label="Slide anterior">&#10094;</button>
+                    <!-- Slides do carrossel -->
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/casaco-azul.jpg" alt="Blusa 1">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/casaco-preto.jpg" alt="Blusa 2">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/cervo-frente.jpg" alt="Blusa 3">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/cervo-costa.jpg" alt="Blusa 4">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/raposa-frente.jpg" alt="Blusa 5">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/raposa-costa.jpg" alt="Blusa 6">
+                    </div>
+                    <div class="carousel__slide">
+                        <img src="assets/img/blusas/passaro.jpg" alt="Blusa 7">
+                    </div>
+                </div>
+                
+                <!-- Botões de navegação do carrossel -->
+                <button class="carousel__control prev" aria-label="Slide anterior">&#10094;</button>
                 <button class="carousel__control next" aria-label="Próximo slide">&#10095;</button>
             </div>
         </section>
+
+        <!-- Espaçamento -->
         <br><br><br>
+        
+        <!-- Âncora para seção de ingressos -->
         <div id="ingresso"></div>
         <br><br>
+
+        <!-- SEÇÃO DE INGRESSOS - Apresenta os tipos e preços de ingressos -->
         <section class="tickets container">
-            <h2 class="section__title animate-fade-up" style="font-size: 40px; ">Ingressos</h2>
+            <h2 class="section__title animate-fade-up" style="font-size: 40px;">Ingressos</h2>
+            
+            <!-- Grade de ingressos com 4 categorias -->
             <div class="tickets__grid">
+                <!-- Ingresso Crianças -->
                 <article class="ticket animate-fade-up">
                     <img src="assets/img/icon/icone-crianca.png" alt="icone-crianca" width="13%">
                     <h3 style="position: relative; top: -20%;">Crianças</h3>
-                    <p class="ticket__price">R$ 15,00</p>
-                    
+                    <p class="ticket__price">R$ 15,00</p>
                 </article>
+
+                <!-- Ingresso Adultos -->
                 <article class="ticket animate-fade-up" style="animation-delay:.1s">
                     <img src="assets/img/icon/icone-adutos.png" alt="icone-adutos" width="13%">
                     <h3 style="position: relative; top: -22.5%;">Adultos</h3>
-                    <p class="ticket__price">R$ 25,00</p>
-                    
+                    <p class="ticket__price">R$ 25,00</p>
                 </article>
+
+                <!-- Ingresso Idosos -->
                 <article class="ticket animate-fade-up" style="animation-delay:.2s">
                     <img src="assets/img/icon/icone-idosos.png" alt="icone-idosos" width="23%">
                     <h3 style="position: relative; top: -26%;">Idosos</h3>
-                    <p class="ticket__price">R$ 10,00</p>
-                    
+                    <p class="ticket__price">R$ 10,00</p>
                 </article>
+
+                <!-- Ingresso PCD (Pessoa com Deficiência) -->
                 <article class="ticket animate-fade-up" style="animation-delay:.3s">
-                    <img src="assets/img/icon/icone-pcd.png" alt="icone-pcd" width="36%" style="position: relative; top: 10px ;">
+                    <img src="assets/img/icon/icone-pcd.png" alt="icone-pcd" width="36%" style="position: relative; top: 10px;">
                     <h3 style="position: relative; top: -13%;">PCD</h3>
-                    <p class="ticket__price">R$ 10,00</p>
-                   
+                    <p class="ticket__price">R$ 10,00</p>
                 </article>
             </div>
         </section>
 
-
+        <!-- SEÇÃO DE CONTATO - Formulário e informações de contato -->
         <section class="contato" id="contact">
-        <div class="container">
-            <h2 style="color: #003d4d;">Pré-Cadastro</h2>
-            <p>Preencha o formulário e garanta seu ingresso o mais rápido possível.</p>
+            <div class="container">
+                <h2 style="color: #003d4d;">Pré-Cadastro</h2>
+                <p>Preencha o formulário e garanta seu ingresso o mais rápido possível.</p>
 
-            <div class="contato-box">
-                <form class="formulario">
-                    <input type="text" placeholder="Seu nome" required>
-                    <input type="email" placeholder="Seu e-mail" required>
-                    <input type="tel" placeholder="Seu telefone (opcional)">
-                    <textarea placeholder="Sua mensagem" rows="6" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
+                <div class="contato-box">
+                    <!-- FORMULÁRIO de pré-cadastro -->
+                    <form class="formulario">
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <input type="tel" placeholder="Seu telefone (opcional)">
+                        <textarea placeholder="Sua mensagem" rows="6" required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
 
-                <div class="info-contato">
-                    <h3 style="color: white;">Informações</h3>
-                    <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">Endereço:</strong>           Praça Washington, s/n - José Menino, Santos - SP, 11065-600</p>
-                    <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">Telefone:</strong>  (13) 3205-2210</p>
-                    <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">Email:</strong>              Orquidariodesantos@eventos.com.br</p>
-                    <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">Horário de atendimento:</strong><br>
-quarta-feira   09:00–18:00
-<br>
-quinta-feira   09:00–18:00
-<br>
-sexta-feira	09:00–18:00
-<br>
-sábado	09:00–18:00
-<br>
-domingo	09:00–18:00
-<br>
-segunda-feira	Fechado
-<br>
-terça-feira	09:00–18:00</p>
+                    <!-- INFORMAÇÕES DE CONTATO do Orquidário -->
+                    <div class="info-contato">
+                        <h3 style="color: white;">Informações</h3>
+                        <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Endereço:</strong> Praça Washington, s/n - José Menino, Santos - SP, 11065-600
+                        </p>
+                        <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Telefone:</strong> (13) 3205-2210
+                        </p>
+                        <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Email:</strong> Orquidariodesantos@eventos.com.br
+                        </p>
+                        <p><strong style="color: #ffffff; font-size: 15px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                            Horário de atendimento:</strong><br>
+                            quarta-feira 09:00–18:00<br>
+                            quinta-feira 09:00–18:00<br>
+                            sexta-feira 09:00–18:00<br>
+                            sábado 09:00–18:00<br>
+                            domingo 09:00–18:00<br>
+                            segunda-feira Fechado<br>
+                            terça-feira 09:00–18:00
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
     </main>
 
+    <!-- RODAPÉ da página -->
     <footer class="footer animate-fade-up" style="background-color: rgb(26, 141, 204);">
         <p>&copy; 2025 Patronum. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- SCRIPTS JAVASCRIPT -->
     <script>
-
-
+        // ========== MENU HAMBÚRGUER (DISPOSITIVOS MÓVEIS) ==========
         const menuToggle = document.getElementById('menu-toggle');
         const navbar = document.getElementById('navbar');
 
+        // Abre/fecha o menu ao clicar no ícone hambúrguer
         menuToggle.addEventListener('click', () => {
             navbar.classList.toggle('active');
             menuToggle.classList.toggle('open');
         });
 
+        // ========== ANIMAÇÕES COM INTERSECTION OBSERVER ==========
+        // Observa elementos com classes que começam com "animate-"
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
+                // Adiciona classe 'show' quando elemento entra na viewport
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
                 }
             });
-        }, { threshold: 0.25 });
+        }, { threshold: 0.25 }); // Ativa quando 25% do elemento está visível
 
+        // Aplica observação a todos os elementos com classes de animação
         document.querySelectorAll('[class*="animate-"]').forEach(el => {
             observer.observe(el);
         });
 
-  
+        // ========== CARROSSEL DE IMAGENS ==========
         const track = document.querySelector('.carousel__track');
         const slides = Array.from(track.children);
         const prevButton = document.querySelector('.prev');
         const nextButton = document.querySelector('.next');
-        let current = 0;
+        let current = 0; // Índice do slide atual
 
+        // Função que atualiza a posição do carrossel
         function updateCarousel() {
             track.style.transform = `translateX(-${current * 100}%)`;
         }
+
+        // Evento: próximo slide ao clicar no botão "next"
         nextButton.addEventListener('click', () => {
-            current = (current + 1) % slides.length;
+            current = (current + 1) % slides.length; // Vai para próximo, volta ao início se necessário
             updateCarousel();
         });
+
+        // Evento: slide anterior ao clicar no botão "prev"
         prevButton.addEventListener('click', () => {
-            current = (current - 1 + slides.length) % slides.length;
+            current = (current - 1 + slides.length) % slides.length; // Vai para anterior, vai para fim se necessário
             updateCarousel();
         });
+
+        // Auto-avança o carrossel a cada 5 segundos (5000ms)
         setInterval(() => {
             current = (current + 1) % slides.length;
             updateCarousel();
