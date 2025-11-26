@@ -1,405 +1,412 @@
+/* ========== VARIÁVEIS CSS (Temas de cores e tamanhos) ========== */
 :root{
-    --clr-primary:#003d4d;
-    --clr-secondary:#00a2b0;
-    --clr-light:#ffffff;
-    --clr-dark:#000;
-    --max-width:1280px;
-    --header-height:4rem;
+    --clr-primary:#003d4d;        /* Cor primária - azul escuro */
+    --clr-secondary:#00a2b0;      /* Cor secundária - azul claro */
+    --clr-light:#ffffff;          /* Cor clara - branco */
+    --clr-dark:#000;              /* Cor escura - preto */
+    --max-width:1280px;           /* Largura máxima do container */
+    --header-height:4rem;         /* Altura do cabeçalho */
 }
+
+/* ========== RESET E ESTILOS GLOBAIS ========== */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin:0;                     /* Remove margem padrão */
+    padding:0;                    /* Remove padding padrão */
+    box-sizing:border-box;        /* Inclui padding/border na largura total */
 }
+
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;      /* Scroll suave ao clicar em âncoras */
 }
 
 body{
-    font-family:'Almendra',serif;
-    line-height:1.6;
-    color:var(--clr-dark);
-    background:var(--clr-light);
-    scroll-behavior:smooth;
-}
-img{
-    max-width:100%;
-    display:block;
-}
-a{
-    color:inherit;
-    text-decoration:none;
-}
-.button,button{
-    cursor:pointer;
-    border:none;
-    padding:.75rem 1.25rem;
-    background:var(--clr-secondary);
-    color:var(--clr-light);
-    border-radius:.25rem;
-    font-weight:600;
-    transition:background .3s;
-}
-.button:hover,button:hover{
-    background:var(--clr-primary);
-}
-.container{
-    width:min(90%,var(--max-width));
-    margin-inline:auto;
-    padding-block:3rem;
-}
-.section__title{
-    margin-bottom:2rem;
-    font-size:clamp(1.75rem,1.2rem+2vw,2.5rem);
-    text-align:center;
-    color:var(--clr-primary);
+    font-family:'Almendra',serif; /* Define fonte do corpo */
+    line-height:1.6;              /* Altura da linha para melhor legibilidade */
+    color:var(--clr-dark);        /* Cor do texto padrão */
+    background:var(--clr-light);  /* Fundo branco */
+    scroll-behavior:smooth;       /* Scroll suave */
 }
 
+img{
+    max-width:100%;               /* Imagens responsivas */
+    display:block;                /* Remove espaço embaixo da imagem */
+}
+
+a{
+    color:inherit;                /* Herda cor do pai */
+    text-decoration:none;         /* Remove sublinhado */
+}
+
+/* ========== BOTÕES ========== */
+.button,button{
+    cursor:pointer;               /* Cursor de mão */
+    border:none;                  /* Remove borda padrão */
+    padding:.75rem 1.25rem;       /* Espaçamento interno */
+    background:var(--clr-secondary); /* Fundo azul claro */
+    color:var(--clr-light);       /* Texto branco */
+    border-radius:.25rem;         /* Cantos arredondados */
+    font-weight:600;              /* Texto em negrito */
+    transition:background .3s;    /* Transição suave de cor */
+}
+
+.button:hover,button:hover{
+    background:var(--clr-primary); /* Muda para azul escuro ao passar mouse */
+}
+
+/* ========== CONTAINER ========== */
+.container{
+    width:min(90%,var(--max-width)); /* 90% da largura ou máximo de 1280px */
+    margin-inline:auto;              /* Centraliza horizontalmente */
+    padding-block:3rem;              /* Espaçamento vertical */
+}
+
+/* ========== TÍTULOS DE SEÇÃO ========== */
+.section__title{
+    margin-bottom:2rem;              /* Espaço abaixo do título */
+    font-size:clamp(1.75rem,1.2rem+2vw,2.5rem); /* Tamanho responsivo */
+    text-align:center;               /* Centraliza texto */
+    color:var(--clr-primary);        /* Cor primária */
+}
+
+/* ========== CABEÇALHO ========== */
 .header {
-    background-color:rgb(26, 141, 204) ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color:rgb(26, 141, 204); /* Fundo azul */
+    display: flex;                      /* Layout flexível */
+    align-items: center;                /* Alinha itens ao centro vertical */
+    justify-content: space-between;     /* Espaça itens horizontalmente */
+    padding: 15px 40px;                 /* Espaçamento interno */
+    position: sticky;                   /* Fica no topo ao rolar */
+    top: 0;                             /* Posição no topo */
+    z-index: 1000;                      /* Fica acima de outros elementos */
 }
 
 .header .logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: flex;                  /* Layout flexível */
+    align-items: center;            /* Alinha itens ao centro */
+    gap: 20px;                      /* Espaço entre logo e título */
 }
+
 .header .logo img {
-    width: 50px;
+    width: 50px;                    /* Largura da imagem do logo */
 }
 
 .header .logo h1 {
-    color: #fff;
-    font-size: 24px;
+    color: #fff;                    /* Texto branco */
+    font-size: 24px;                /* Tamanho do título */
 }
 
+/* ========== NAVEGAÇÃO ========== */
 .navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+    display: flex;                  /* Layout em linha */
+    list-style: none;               /* Remove bolinhas */
+    gap: 30px;                      /* Espaço entre itens */
 }
 
 .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    color: #fff;                    /* Texto branco */
+    text-decoration: none;          /* Remove sublinhado */
+    font-weight: 500;               /* Peso da fonte */
+    transition: color 0.3s ease;    /* Transição suave de cor */
 }
 
 .navbar ul li a:hover {
-    color: #00c9a7;
+    color: #00c9a7;                 /* Muda cor ao passar mouse */
 }
 
+/* ========== MENU HAMBÚRGUER ========== */
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
+    display: none;                  /* Oculto por padrão (aparece no mobile) */
+    flex-direction: column;         /* Organiza em coluna */
+    cursor: pointer;                /* Cursor de mão */
+    gap: 5px;                       /* Espaço entre linhas */
 }
 
 .menu-toggle span {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 5px;
+    width: 30px;                    /* Largura das linhas */
+    height: 3px;                    /* Altura das linhas */
+    background-color: #fff;         /* Cor branca */
+    border-radius: 5px;             /* Cantos arredondados */
 }
 
+/* ========== SEÇÃO HERO (Principal) ========== */
 .hero{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    align-items:center;
-    gap:2rem;
+    display:grid;                              /* Layout em grid */
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); /* Responsivo */
+    align-items:center;                        /* Alinha itens ao centro */
+    gap:2rem;                                  /* Espaço entre colunas */
 }
+
 .hero__text h1{
-    font-size:clamp(2rem,1.5rem+2vw,3rem);
-    margin-bottom:1rem;
+    font-size:clamp(2rem,1.5rem+2vw,3rem);   /* Tamanho responsivo */
+    margin-bottom:1rem;                        /* Espaço abaixo */
 }
+
+/* ========== CARROSSEL DE IMAGENS ========== */
 .carousel{
-    position:relative;
-    overflow:hidden;
-    aspect-ratio:16/9;
-    border-radius:1rem;
-    background:#ccc;
-    width: 70%;
-    height: 170%;
-    top: 25%;
-    left: 20%;
+    position:relative;              /* Posicionamento relativo */
+    overflow:hidden;                /* Esconde conteúdo que sai do container */
+    aspect-ratio:16/9;              /* Proporção 16:9 */
+    border-radius:1rem;             /* Cantos arredondados */
+    background:#ccc;                /* Fundo cinza */
+    width: 70%;                     /* Largura */
+    height: 170%;                   /* Altura */
+    top: 25%;                       /* Posição do topo */
+    left: 20%;                      /* Posição da esquerda */
 }
+
 .carousel__track{
-    display:flex;
-    width:100%;
-    height:100%;
-    transition:transform .6s ease;
+    display:flex;                   /* Layout flexível */
+    width:100%;                     /* Largura total */
+    height:100%;                    /* Altura total */
+    transition:transform .6s ease;  /* Animação ao mudar slide */
 }
+
 .carousel__slide{
-    flex:1 0 100%;
-    background-size:cover;
-    background-position:center;
-    filter:brightness(.8);
+    flex:1 0 100%;                  /* Cada slide ocupa 100% da largura */
+    background-size:cover;          /* Imagem cobre o espaço */
+    background-position:center;     /* Imagem centralizada */
+    filter:brightness(.8);          /* Reduz o brilho */
 }
+
+/* ========== BOTÕES DO CARROSSEL ========== */
 .carousel__control{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    background:rgba(0,0,0,.4);
-    color:#fff;
-    border-radius:50%;
-    width:2.5rem;
-    height:2.5rem;
-    display:grid;
-    place-content:center;
-    border:none;
+    position:absolute;              /* Posicionamento absoluto */
+    top:50%;                        /* Centraliza verticalmente */
+    transform:translateY(-50%);     /* Ajusta posição vertical */
+    background:rgba(0,0,0,.4);     /* Fundo semi-transparente preto */
+    color:#fff;                     /* Texto branco */
+    border-radius:50%;              /* Forma circular */
+    width:2.5rem;                   /* Largura */
+    height:2.5rem;                  /* Altura */
+    display:grid;                   /* Layout em grid */
+    place-content:center;           /* Centraliza conteúdo */
+    border:none;                    /* Sem borda */
 }
+
 .carousel__control.prev{
-    left:1rem;
+    left:1rem;                      /* Botão anterior à esquerda */
 }
+
 .carousel__control.next{
-    right:1rem;
+    right:1rem;                     /* Botão próximo à direita */
 }
 
+/* ========== RESPONSIVIDADE - TABLETS E MOBILE ========== */
 @media (max-width: 768px) {
-  .navbar {
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    background-color: rgb(26, 141, 204);
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    display: none;
-    flex-direction: column;
-    padding: 20px;
-  }
+    .navbar {
+        display: none;              /* Navegação desaparece */
+    }
 
-  .navbar ul {
-    flex-direction: column;
-    gap: 20px;
-  }
+    .navbar ul {
+        flex-direction: column;      /* Itens em coluna */
+    }
 
-  .navbar.active {
-    display: flex;
-  }
+    .navbar.active {
+        display: flex;               /* Mostra quando ativo */
+    }
 
-  .menu-toggle {
-    display: flex;
-  }
+    .menu-toggle {
+        display: flex;               /* Menu hambúrguer aparece */
+    }
 }
 
+/* ========== INGRESSOS - GRID ========== */
 .tickets__grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:1.5rem;
+    display:grid;                                   /* Layout em grid */
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); /* Responsivo */
+    gap:1.5rem;                                     /* Espaço entre itens */
 }
+
 .ticket{
-    background:var(--clr-light);
-    padding:1.5rem;
-    border:1px solid rgba(0,0,0,.1);
-    text-align:center;
-    border-radius:.5rem;
-    box-shadow:0 4px 6px rgba(0,0,0,.08);
+    background:var(--clr-light);    /* Fundo branco */
+    padding:1.5rem;                 /* Espaçamento interno */
+    border:1px solid rgba(0,0,0,.1); /* Borda cinza leve */
 }
+
 .ticket__price{
-    font-size:1.25rem;
-    margin:1rem 0 1.5rem;
-    color:var(--clr-secondary);
+    font-size: 1.5rem;              /* Tamanho da fonte */
+    font-weight: bold;              /* Texto em negrito */
+    color: var(--clr-secondary);    /* Cor azul claro */
 }
 
+/* ========== RODAPÉ ========== */
 .footer{
-    text-align:center;
-    padding:2rem 1rem;
-    background:var(--clr-primary);
-    color:var(--clr-light);
-    margin-top:3rem
+    background-color: rgb(26, 141, 204); /* Fundo azul */
+    color: #fff;                         /* Texto branco */
+    text-align: center;                  /* Texto centralizado */
+    padding: 2rem;                       /* Espaçamento interno */
 }
 
+/* ========== ANIMAÇÕES (KEYFRAMES) ========== */
 
-.nav__toggle .bar{
-    width:25px;
-    height:3px;
-    background:var(--clr-dark);
-    transition:transform .3s,opacity .3s;
-}
-.nav__toggle.active .bar:nth-child(1){
-    transform:rotate(45deg) translateY(8px);
-}
-.nav__toggle.active .bar:nth-child(2){
-    opacity:0;
-}
-.nav__toggle.active .bar:nth-child(3){
-    transform:rotate(-45deg) translateY(-8px);
+@keyframes fadeDown{
+    0%{
+        opacity: 0;                 /* Começa invisível */
+        transform: translateY(-20px); /* Começa acima */
+    }
+    100%{
+        opacity: 1;                 /* Fica visível */
+        transform: translateY(0);   /* Volta à posição normal */
+    }
 }
 
-@media(max-width:768px){
-    .nav__toggle{display:flex}
-    .nav__list{position:fixed;inset:0 0 0 40%;
-        flex-direction:column;
-        padding-top:5rem;background:var(--clr-light);
-        transform:translateX(100%);
-        transition:transform .3s}
-    .nav__list.active{transform:translateX(0)}
-}
-@media(max-width:480px){
-    .header{padding:0 .5rem}
-    .nav__list{inset:0 0 0 30%}
+@keyframes fadeUp{
+    0%{
+        opacity: 0;                 /* Começa invisível */
+        transform: translateY(20px); /* Começa abaixo */
+    }
+    100%{
+        opacity: 1;                 /* Fica visível */
+        transform: translateY(0);   /* Volta à posição normal */
+    }
 }
 
-
-@keyframes fadeDown{0%{
-    opacity:0;
-    transform:translateY(-20px)}100%{
-    opacity:1;
-    transform:none;}
+@keyframes slideUp{
+    0%{
+        transform: translateY(30px); /* Começa abaixo */
+    }
+    100%{
+        transform: translateY(0);   /* Volta ao normal */
+    }
 }
 
-@keyframes fadeUp{0%{
-    opacity:0;
-    transform:translateY(20px)}100%{
-        opacity:1;
-        transform:none;}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0.8);      /* Começa menor */
+        opacity: 0;                 /* Começainvisível */
+    }
+    100%{
+        transform: scale(1);        /* Fica no tamanho normal */
+        opacity: 1;                 /* Fica visível */
+    }
 }
 
-@keyframes slideUp{0%{
-    opacity:0;
-    transform:translateY(40px)}100%{
-        opacity:1;
-        transform:none;}
-}
-@keyframes zoomIn{0%{
-    opacity:0;
-    transform:scale(.9)}100%{opacity:1;
-        transform:scale(1);}
-}
+/* ========== CLASSES DE ANIMAÇÃO ========== */
+/* Define as animações (sem ativar ainda) */
 .animate-fade-down{
-    opacity:0;
+    opacity: 0;
+    animation: fadeDown 0.8s ease forwards;
 }
+
 .animate-fade-up{
-    opacity:0;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
 }
+
 .animate-slide-up{
-    opacity:0;
+    animation: slideUp 0.8s ease forwards;
 }
+
 .animate-zoom-in{
-    opacity:0;
+    animation: zoomIn 0.8s ease forwards;
 }
+
+/* Ativa as animações quando elemento aparece na tela */
 .show.animate-fade-down{
-    animation:fadeDown .8s forwards;
+    animation: fadeDown 0.8s ease forwards;
 }
+
 .show.animate-fade-up{
-    animation:fadeUp .8s forwards;
+    animation: fadeUp 0.8s ease forwards;
 }
+
 .show.animate-slide-up{
-    animation:slideUp .8s forwards;
+    animation: slideUp 0.8s ease forwards;
 }
+
 .show.animate-zoom-in{
-    animation:zoomIn .8s forwards;
+    animation: zoomIn 0.8s ease forwards;
 }
 
+/* ========== IMAGENS DO CARROSSEL ========== */
 .carousel__slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block
-}
-.contato {
-    padding: 60px 20px;
-    background-color: #fff;
+    width: 100%;                    /* Ocupa largura total */
+    height: 100%;                   /* Ocupa altura total */
+    object-fit: cover;              /* Cobre o espaço mantendo proporção */
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
+/* ========== SEÇÃO DE CONTATO ========== */
+.contato {
+    background: rgb(26, 141, 204); /* Fundo azul */
+    padding: 3rem 0;               /* Espaçamento vertical */
 }
 
 .contato h2 {
-    text-align: center;
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 10px;
+    color: #fff;                   /* Título branco */
+    margin-bottom: 1rem;           /* Espaço abaixo */
 }
 
 .contato p {
-    text-align: center;
-    color: #000000;
-    margin-bottom: 40px;
+    color: #fff;                   /* Texto branco */
+    margin-bottom: 1rem;           /* Espaço abaixo */
 }
 
 .contato-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
+    display: grid;                 /* Layout em grid */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 2rem;                     /* Espaço entre colunas */
+    margin-top: 2rem;              /* Espaço acima */
 }
 
+/* ========== FORMULÁRIO ========== */
 .formulario {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background-color: #fafafa;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;                 /* Layout flexível */
+    flex-direction: column;        /* Itens em coluna */
+    gap: 1rem;                     /* Espaço entre inputs */
 }
 
 .formulario input,
 .formulario textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
+    padding: 0.75rem;              /* Espaçamento interno */
+    border: none;                  /* Sem borda */
+    border-radius: 0.25rem;        /* Cantos leves */
+    font-family: inherit;          /* Herda fonte */
 }
 
 .formulario input:focus,
 .formulario textarea:focus {
-    border-color: #0077ff;
+    outline: 2px solid var(--clr-secondary); /* Borda azul ao focar */
+    background: #f0f0f0;           /* Fundo cinza leve */
 }
 
 .formulario button {
-    padding: 12px;
-    background-color: #0077ff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    background: var(--clr-secondary); /* Fundo azul claro */
+    padding: 0.75rem;              /* Espaçamento interno */
+    margin-top: 1rem;              /* Espaço acima */
 }
 
 .formulario button:hover {
-    background-color: #005fcc;
+    background: var(--clr-primary); /* Muda para azul escuro */
 }
 
+/* ========== INFORMAÇÕES DE CONTATO ========== */
 .info-contato {
-    flex: 1 1 300px;
-    background-color: rgb(26, 141, 204);
-    color: rgb(0, 0, 0);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: rgba(0,0,0,.2);    /* Fundo semi-transparente */
+    padding: 1.5rem;               /* Espaçamento interno */
+    border-radius: 0.5rem;         /* Cantos arredondados */
 }
 
 .info-contato h3 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    color: #fff;                   /* Título branco */
+    margin-bottom: 1rem;           /* Espaço abaixo */
 }
 
 .info-contato p {
-    margin-bottom: 15px;
-    line-height: 1.6;
+    color: #fff;                   /* Texto branco */
+    margin-bottom: 0.5rem;         /* Espaço abaixo */
+    font-size: 0.95rem;            /* Tamanho da fonte */
 }
 
+/* ========== RESPONSIVIDADE - TABLETS ========== */
 @media (max-width: 768px) {
     .contato-box {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr; /* Uma coluna */
+    }
+
+    .carousel {
+        width: 100%;                /* Usa largura total */
+        height: auto;               /* Altura automática */
+        left: 0;                    /* Remove posicionamento */
+        top: 0;
     }
 }
